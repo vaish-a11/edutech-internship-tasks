@@ -1,0 +1,18 @@
+# Task 2 – Responsive Design using Flexbox & CSS Grid
+
+## Overview
+A fully responsive webpage built using CSS Flexbox and CSS Grid with media queries.
+
+## Features
+- Flexbox navbar (collapses on mobile)
+- CSS Grid 3-column card layout (2-col tablet, 1-col mobile)
+- Grid-based sidebar + content layout
+- Media queries at 768px and 480px breakpoints
+- Mobile-first responsive design
+
+## Tools Used
+- HTML5, CSS3
+- VS Code, Chrome DevTools
+
+## How to Run
+Open `index.html` in any browser.

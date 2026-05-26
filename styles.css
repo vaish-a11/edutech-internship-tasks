@@ -1,0 +1,197 @@
+/* ── RESET & BASE ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+/* ── NAVBAR (Flexbox) ── */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: #1a1a2e;
+  padding: 14px 24px;
+}
+
+.logo {
+  color: #00d4ff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #00d4ff;
+}
+
+/* ── HERO (Flexbox) ── */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a2e, #7c3aed);
+  color: white;
+  padding: 60px 20px;
+  gap: 12px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #c4b5fd;
+}
+
+/* ── MAIN LAYOUT (CSS Grid: sidebar + content) ── */
+.main-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  padding: 28px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  height: fit-content;
+}
+
+.sidebar h3 {
+  color: #7c3aed;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar ul li {
+  padding: 8px 12px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  border-left: 3px solid #7c3aed;
+}
+
+/* ── CARD GRID (CSS Grid) ── */
+.content h2 {
+  margin-bottom: 16px;
+  color: #1e293b;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border-top: 3px solid #00d4ff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  color: #7c3aed;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ── FOOTER (Flexbox) ── */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #1a1a2e;
+  color: #94a3b8;
+  padding: 16px 24px;
+  font-size: 0.85rem;
+  margin-top: 40px;
+}
+
+/* ════════════════════════════
+   MEDIA QUERIES (Responsive)
+════════════════════════════ */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+}
